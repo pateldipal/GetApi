@@ -5,7 +5,7 @@ import {AboutComponent} from "./api/about/about.component";
 import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
-  { path: 'api', component: ApitblComponent},
+  // { path: 'api', component: ApitblComponent},
   { path: 'about', component: AboutComponent },
   { path: 'home', component:HomeComponent }
 ];
