@@ -10,7 +10,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let data of api1">
+      <tr *ngFor="let data of listcommens">
         <td>{{data.userId}}</td>
         <td>{{data.id}}</td>
         <td>{{data.title}}</td>
@@ -18,4 +18,37 @@
       </tr>
       </tbody>
     </table>
+
+
+  <br><br>
+  <h1>{{title2}}</h1>
+  <table class="table table-dark">
+  <thead>
+    <tr>
+      <th>Post_Id</th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Body</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let arr of letposts">
+      <td>{{arr.postId}}</td>
+      <td>{{arr.id}}</td>
+      <td>{{arr.name}}</td>
+      <td>{{arr.email}}</td>
+      <td>{{arr.body}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+
+<br><br>
+<h1>{{title3}}</h1>
+<p>id:{{object?.id}}</p>
+<p>UserID:{{object?.UserId}}</p>
+<p>Title:{{object?.title}}</p>
+<p>Body:{{object?.body}}</p>
 </div>
+

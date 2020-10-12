@@ -21,6 +21,6 @@ import { HomeComponent } from './home/home.component';
 })
 export class AppModule {
   constructor(){
-    console.log('app.module loaded');
+    console.log('app module loaded');
   }
 }

@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApitblComponent } from './apitbl/apitbl.component';
-import { AboutComponent } from './about/about.component';
 import { HttpClientModule} from "@angular/common/http";
 import {RouterModule, Routes} from "@angular/router";
 
 const ApiRoutes: Routes =[
-  {path: 'getApi', component: ApitblComponent}
+  {path: '', component: ApitblComponent}
 ]
 
 @NgModule({
-  declarations: [ApitblComponent, AboutComponent],
+  declarations: [ApitblComponent],
   exports: [
     ApitblComponent,
-    AboutComponent,
     HttpClientModule
   ],
   imports: [
