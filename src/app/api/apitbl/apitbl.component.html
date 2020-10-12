@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>{{title}}</h2>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Uesr_ID</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let data of api1">
+        <td>{{data.userId}}</td>
+        <td>{{data.id}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.body}}</td>
+      </tr>
+      </tbody>
+    </table>
+</div>
