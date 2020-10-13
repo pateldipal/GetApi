@@ -14,6 +14,7 @@ export class ApitblComponent implements OnInit {
   listcommens : Comments[];
   letposts:Post[];
   object:Posts;
+  del;
   //a rite pan thay
   // api1: any = [];
   //post: any =[];
@@ -43,5 +44,30 @@ export class ApitblComponent implements OnInit {
         this.object = data;
      })
   }
+  deleteGet(id:number){
+    console.log(id," id ");
+
+    var index = this.listcommens.map(x => {
+      console.log(x.userId," userid ");
+      return x.id;
+    }).indexOf(id);
+
+    console.log(index);
+    this.listcommens.splice(index, 1);
+    console.log(this.listcommens);
+
+    /*this.listcommens.splice(
+      this.listcommens.indexOf(
+        this.listcommens.find(function(e) {
+          return e.id == 2;
+
+        })), 1);
+      */
+   // this.listcommens.slice(id, 1);
+   // this.api.deleteGet(id).subscribe(res=>{
+   //   console.warn(res);
+   //  })
+  }
+
 
 }

@@ -11,7 +11,7 @@ export class ApiserviceService {
   constructor(private http:HttpClient) { }
 
   apiCall():Observable<any>{
-    return this.http.get('https://jsonplaceholder.typicode.com/posts');
+    return this.http.get('../assets/GetApi.json');
   }
   apiCallbyParameter(): Observable<any>{
     let paramss = new HttpParams().set('userId',"1");
@@ -19,6 +19,9 @@ export class ApiserviceService {
   }
 
   posts(apipost: Posts): Observable<any>{
-      return this.http.post('https://jsonplaceholder.typicode.com/posts',apipost);
+      return this.http.post('../assets/GetApi.json',apipost);
+  }
+  deleteGet(id):Observable<any>{
+    return this.http.delete('../assets/GetApi.json' + id);
   }
 }
