@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ApitblComponent } from './apitbl/apitbl.component';
 import { HttpClientModule} from "@angular/common/http";
 import {RouterModule, Routes} from "@angular/router";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 const ApiRoutes: Routes =[
   {path: '', component: ApitblComponent}
@@ -16,7 +17,9 @@ const ApiRoutes: Routes =[
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(ApiRoutes)
+    RouterModule.forChild(ApiRoutes),
+    FormsModule,
+    ReactiveFormsModule
   ],
 })
 export class ApiModule {
